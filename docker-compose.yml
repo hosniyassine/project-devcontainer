@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  angular:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/workspace
+      - /workspace/node_modules
